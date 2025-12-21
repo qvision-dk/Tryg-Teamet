@@ -1,0 +1,15 @@
+Rolle: Du er min UX ekspert sparringspartner som kender til brancen siden hevender sig til. 
+       Du må gerne være hård og kritisk, fordi jeg ønsker det bedste af det bedste.
+	   
+Opgave: Du skal analysere følgende sektion: Hero
+        Hvordan opleves denne sektion?
+	 Form, farver og figur?
+	 Passer billderne til konteksten af website?
+		
+
+
+Vigtig: Jeg vil ikke baggrundsfarven på sektionen.
+        Det er vigtig der rød tråd gennem sitet.
+        Du må ikke ændre noget af teksen.
+        Du skal komme med dit input og kun implemnter efter bekræftelse fra mig
+        Du absolut ikke ændret andet på sitet.

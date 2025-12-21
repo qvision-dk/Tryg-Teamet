@@ -1,0 +1,46 @@
+TASK: Build a static website for Tryg-Teamet ApS
+
+Output:
+- One single self-contained HTML file
+- HTML, CSS, and JavaScript in the same file
+- No external libraries or frameworks
+- Ready for static hosting
+- Responsive (desktop-first, mobile friendly)
+
+Design direction:
+- Inspired by Apple.com aesthetics
+- Minimal, calm, spacious
+- Professional but human (not cold or corporate)
+
+Color palette (use exactly):
+- Background: #F5F5F7
+- Primary text: #1D1D1F
+- Secondary text: #6E6E73
+- Accent / CTA: #4F6F64
+- Light accent background: #E6EFEB
+- Borders / dividers: #D2D2D7
+- Hover / active: #3F5E55
+
+Typography:
+- System fonts only
+- Clean sans-serif
+- High readability and contrast
+
+Fixed section order:
+1) Hero (headline, short intro, 1–2 CTAs)
+2) Who we are
+3) Services / What we help with
+4) For vikarer
+5) For samarbejdspartnere
+6) How we work
+7) Values (Tryghed, Nærhed, Ordentlighed)
+8) Contact
+
+Interaction:
+- Subtle fade-in animations only
+- No flashy or decorative effects
+
+Before generating:
+- Ask me to paste the website text
+- Ask me to confirm readiness
+- WAIT until I say: “GO – generate”.

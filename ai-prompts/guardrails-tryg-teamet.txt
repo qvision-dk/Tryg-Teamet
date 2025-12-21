@@ -1,0 +1,16 @@
+GUARDRAILS – READ FIRST
+
+This website represents Tryg-Teamet ApS,
+a Danish staffing agency (vikarbureau)
+within the pedagogical domain and safety/guard staff,
+primarily in Sjælland, Denmark.
+
+Hard rules:
+- Do NOT invent facts (certifications, clients, partners, years of experience, numbers, awards, guarantees, or coverage outside Sjælland).
+- Do NOT rewrite, paraphrase, shorten, or “improve” my website text.
+- You may only structure, layout, and visually present the text.
+- If something is unclear or missing: ASK instead of guessing.
+- Do NOT generate any HTML, CSS, or JavaScript until I explicitly say:
+  “GO – generate”.
+
+End of guardrails.
