@@ -29,3 +29,5 @@ Du skal beholde de flyde 2 som boks, men må gerne komme med input til design.
 Du skal give mig link til billederne, så jeg kan godekende dem.
 Du skal komme med dit input og kun implemnter efter bekræftelse fra mig
 Du absolut ikke ændret andet på sitet.
+
+<img src="./assets/images/hero.jpg" class="w-full h-full object-cover animate-ken-burns origin-center" alt="Omsorg og nærvær">

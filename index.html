@@ -146,6 +146,11 @@
           opacity: 0.6;
           filter: grayscale(0.5);
       }
+
+      /* Progress Line Styles */
+      #timeline-progress-bar {
+        transition: height 0.3s ease-out;
+      }
     </style>
 
 <link rel="stylesheet" href="/index.css">
@@ -443,49 +448,82 @@
         </div>
       </section>
 
-      <!-- 5. Process Section -->
-      <section id="hvordan-vi-arbejder" class="py-32 sm:py-40 bg-tryg-base fade-in-section">
-        <div class="max-w-[1200px] mx-auto px-8 sm:px-12">
+      <!-- 5. Process Section (The Controlled Flow Redesign) -->
+      <section id="hvordan-vi-arbejder" class="py-32 sm:py-48 bg-tryg-base fade-in-section relative overflow-hidden">
+        <div class="max-w-[1200px] mx-auto px-8 sm:px-12 relative z-10">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
-            <!-- Left Sticky -->
+            <!-- Left Sticky: The Visual Evidence -->
             <div class="md:sticky md:top-32 h-fit">
               <h2 class="text-base font-semibold text-tryg-secondary uppercase tracking-[0.2em] mb-4">Sådan arbejder vi</h2>
-              <h3 class="text-4xl sm:text-5xl font-semibold text-tryg-text mb-8">Stabilitet og tryghed i praksis.</h3>
+              <h3 class="text-4xl sm:text-5xl font-semibold text-tryg-text mb-8 tracking-tight">Stabilitet og tryghed i praksis.</h3>
               <p class="text-xl text-tryg-secondary leading-relaxed mb-12">Vi har en simpel og transparent proces, der sikrer det rette match hver gang.</p>
               
-              <div class="relative w-full aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-green-glow border border-white/20 hidden md:block">
-                 <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=2070&auto=format&fit=crop" id="process-img-1" class="timeline-img active absolute inset-0 w-full h-full object-cover" alt="Afklaring">
-                 <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop" id="process-img-2" class="timeline-img inactive absolute inset-0 w-full h-full object-cover" alt="Match">
-                 <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop" id="process-img-3" class="timeline-img inactive absolute inset-0 w-full h-full object-cover" alt="Opfølgning">
-                 <div class="absolute inset-0 bg-black/10"></div>
+              <div class="relative w-full aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-soft border-[1px] border-tryg-accent/20 bg-white hidden md:block group/imgframe">
+                 <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=2070&auto=format&fit=crop" id="process-img-1" class="timeline-img active absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/imgframe:scale-105" alt="Afklaring">
+                 <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop" id="process-img-2" class="timeline-img inactive absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/imgframe:scale-105" alt="Match">
+                 <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop" id="process-img-3" class="timeline-img inactive absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/imgframe:scale-105" alt="Opfølgning">
+                 
+                 <!-- Architectural Frame Decoration -->
+                 <div class="absolute inset-0 border-[12px] border-white/40 pointer-events-none"></div>
+                 <div class="absolute inset-0 border-[1px] border-tryg-accent/10 pointer-events-none"></div>
               </div>
             </div>
             
-            <div class="relative pl-0 md:pl-12" id="timeline-container">
+            <!-- Right: The Systematized Timeline -->
+            <div class="relative pl-0 md:pl-20" id="timeline-container">
+              <!-- Vertical Pulse Line -->
+              <div class="absolute left-8 top-16 bottom-16 w-[4px] bg-gray-200/50 rounded-full hidden md:block overflow-hidden">
+                  <div id="timeline-progress-bar" class="absolute top-0 left-0 w-full bg-tryg-accent rounded-full h-0"></div>
+              </div>
+
               <!-- Item 1 -->
-              <div class="flex gap-6 sm:gap-10 mb-32 timeline-step group" id="step-1" data-step="1">
-                 <div class="flex-shrink-0"><span class="text-[100px] sm:text-[140px] font-bold text-white group-hover:text-tryg-accent transition-colors duration-500 timeline-number block leading-[0.8]">1</span></div>
-                 <div class="pt-2">
-                     <h4 class="text-3xl font-semibold text-tryg-text mb-4 transition-colors duration-300">Afklaring</h4>
-                     <p class="text-xl text-tryg-secondary leading-relaxed">Vi starter med at forstå opgaven, rammerne og menneskene involveret. En god start kræver indsigt i jeres hverdag. Vi tager en grundig snak om forventninger og behov.</p>
+              <div class="flex flex-col sm:flex-row gap-6 sm:gap-10 mb-32 timeline-step group relative" id="step-1" data-step="1">
+                 <!-- The Anchor Point -->
+                 <div class="flex-shrink-0 hidden md:block absolute -left-[76px] top-6 z-20">
+                    <div class="w-12 h-12 bg-white rounded-full border-4 border-gray-200 group-[.active]:border-tryg-accent group-[.active]:scale-110 transition-all duration-500 shadow-sm flex items-center justify-center font-bold text-tryg-secondary group-[.active]:text-tryg-accent">
+                        1
+                    </div>
+                 </div>
+                 
+                 <!-- Step Card -->
+                 <div class="bg-white/70 backdrop-blur-md p-8 sm:p-10 rounded-[2.5rem] shadow-soft border border-white/50 group-[.active]:border-tryg-accent/20 group-[.active]:shadow-xl transition-all duration-500 w-full">
+                     <span class="text-7xl font-bold text-tryg-accent/5 md:hidden block leading-none mb-4 italic">01</span>
+                     <h4 class="text-3xl font-bold text-tryg-text mb-6 tracking-tight">Afklaring</h4>
+                     <p class="text-xl text-tryg-secondary leading-relaxed font-light">Vi starter med at forstå opgaven, rammerne og menneskene involveret. En god start kræver indsigt i jeres hverdag. Vi tager en grundig snak om forventninger og behov.</p>
                  </div>
               </div>
 
               <!-- Item 2 -->
-              <div class="flex gap-6 sm:gap-10 mb-32 timeline-step group" id="step-2" data-step="2">
-                 <div class="flex-shrink-0"><span class="text-[100px] sm:text-[140px] font-bold text-white group-hover:text-tryg-accent transition-colors duration-500 timeline-number block leading-[0.8]">2</span></div>
-                 <div class="pt-2">
-                     <h4 class="text-3xl font-semibold text-tryg-text mb-4 transition-colors duration-300">Det rette match</h4>
-                     <p class="text-xl text-tryg-secondary leading-relaxed">Vi matcher med omtanke. Vi ser ikke kun på faglighed, men i høj grad også på den personlige egnethed til netop jeres sted. I får præsenteret en kandidat, vi står inde for.</p>
+              <div class="flex flex-col sm:flex-row gap-6 sm:gap-10 mb-32 timeline-step group relative" id="step-2" data-step="2">
+                 <!-- The Anchor Point -->
+                 <div class="flex-shrink-0 hidden md:block absolute -left-[76px] top-6 z-20">
+                    <div class="w-12 h-12 bg-white rounded-full border-4 border-gray-200 group-[.active]:border-tryg-accent group-[.active]:scale-110 transition-all duration-500 shadow-sm flex items-center justify-center font-bold text-tryg-secondary group-[.active]:text-tryg-accent">
+                        2
+                    </div>
+                 </div>
+
+                 <!-- Step Card -->
+                 <div class="bg-white/70 backdrop-blur-md p-8 sm:p-10 rounded-[2.5rem] shadow-soft border border-white/50 group-[.active]:border-tryg-accent/20 group-[.active]:shadow-xl transition-all duration-500 w-full">
+                     <span class="text-7xl font-bold text-tryg-accent/5 md:hidden block leading-none mb-4 italic">02</span>
+                     <h4 class="text-3xl font-bold text-tryg-text mb-6 tracking-tight">Det rette match</h4>
+                     <p class="text-xl text-tryg-secondary leading-relaxed font-light">Vi matcher med omtanke. Vi ser ikke kun på faglighed, men i høj grad også på den personlige egnethed til netop jeres sted. I får præsenteret en kandidat, vi står inde for.</p>
                  </div>
               </div>
 
               <!-- Item 3 -->
-              <div class="flex gap-6 sm:gap-10 timeline-step group" id="step-3" data-step="3">
-                 <div class="flex-shrink-0"><span class="text-[100px] sm:text-[140px] font-bold text-white group-hover:text-tryg-accent transition-colors duration-500 timeline-number block leading-[0.8]">3</span></div>
-                 <div class="pt-2">
-                     <h4 class="text-3xl font-semibold text-tryg-text mb-4 transition-colors duration-300">Opfølgning</h4>
-                     <p class="text-xl text-tryg-secondary leading-relaxed">Vi gør rammerne tydelige og følger op, hvis noget skal justeres. Dialogen stopper ikke, når vagten er dækket. Vi sikrer kvaliteten løbende.</p>
+              <div class="flex flex-col sm:flex-row gap-6 sm:gap-10 timeline-step group relative" id="step-3" data-step="3">
+                 <!-- The Anchor Point -->
+                 <div class="flex-shrink-0 hidden md:block absolute -left-[76px] top-6 z-20">
+                    <div class="w-12 h-12 bg-white rounded-full border-4 border-gray-200 group-[.active]:border-tryg-accent group-[.active]:scale-110 transition-all duration-500 shadow-sm flex items-center justify-center font-bold text-tryg-secondary group-[.active]:text-tryg-accent">
+                        3
+                    </div>
+                 </div>
+
+                 <!-- Step Card -->
+                 <div class="bg-white/70 backdrop-blur-md p-8 sm:p-10 rounded-[2.5rem] shadow-soft border border-white/50 group-[.active]:border-tryg-accent/20 group-[.active]:shadow-xl transition-all duration-500 w-full">
+                     <span class="text-7xl font-bold text-tryg-accent/5 md:hidden block leading-none mb-4 italic">03</span>
+                     <h4 class="text-3xl font-bold text-tryg-text mb-6 tracking-tight">Opfølgning</h4>
+                     <p class="text-xl text-tryg-secondary leading-relaxed font-light">Vi gør rammerne tydelige og følger op, hvis noget skal justeres. Dialogen stopper ikke, når vagten er dækket. Vi sikrer kvaliteten løbende.</p>
                  </div>
               </div>
             </div>
@@ -597,7 +635,7 @@
                         <p class="font-semibold text-tryg-text text-sm mb-2">Ofte stillede spørgsmål</p>
                         <details class="group bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm">
                             <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 group-hover:bg-gray-50 transition-colors"><span>Hvad er lønnen som vikar?</span><span class="transition group-open:rotate-180"><svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
-                            <div class="text-tryg-secondary mt-0 px-5 pb-5 text-sm leading-relaxed">Lønnen følger gældende overenskomster og afhænger af dine kvalifikationer samt opgavens art. Vi sikrer altid ordentlige forhold.</div>
+                            <div class="text-tryg-secondary mt-0 px-5 pb-5 text-sm leading-relaxed">Lønnen følger gældende overenskomster og afhænden af dine kvalifikationer samt opgavens art. Vi sikrer altid ordentlige forhold.</div>
                         </details>
                         <details class="group bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm">
                             <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 group-hover:bg-gray-50 transition-colors"><span>Hvor hurtigt kan jeg komme i gang?</span><span class="transition group-open:rotate-180"><svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
@@ -755,21 +793,41 @@
       });
 
       const timelineContainer = document.getElementById('timeline-container');
+      const progressBar = document.getElementById('timeline-progress-bar');
       const steps = document.querySelectorAll('.timeline-step');
       const processImgs = document.querySelectorAll('.timeline-img');
       if (timelineContainer) {
           window.addEventListener('scroll', () => {
-            const rect = timelineContainer.getBoundingClientRect();
+            const containerRect = timelineContainer.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            // Progress bar logic
+            if (progressBar) {
+              const startOffset = windowHeight * 0.5;
+              const progressDistance = Math.max(0, startOffset - containerRect.top);
+              const totalDistance = containerRect.height - 200; // Account for padding
+              const percentage = Math.min(100, (progressDistance / totalDistance) * 100);
+              progressBar.style.height = `${percentage}%`;
+            }
+
+            // Step activation logic
             let activeStepIndex = 0; 
             steps.forEach((step, index) => {
-                if (step.getBoundingClientRect().top < window.innerHeight * 0.7) {
+                if (step.getBoundingClientRect().top < windowHeight * 0.6) {
                     activeStepIndex = index;
                     step.classList.add('active');
                 } else { step.classList.remove('active'); }
             });
+
+            // Image sync logic
             processImgs.forEach((img, index) => {
-                if (index === activeStepIndex) { img.classList.remove('inactive'); img.classList.add('active'); } 
-                else { img.classList.remove('active'); img.classList.add('inactive'); }
+                if (index === activeStepIndex) { 
+                  img.classList.remove('inactive'); 
+                  img.classList.add('active'); 
+                } else { 
+                  img.classList.remove('active'); 
+                  img.classList.add('inactive'); 
+                }
             });
           });
       }
