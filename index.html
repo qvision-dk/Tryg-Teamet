@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tryg-Teamet ApS</title>
     <meta name="description" content="Vikarbureau inden for det pædagogiske område og vagtpersonale på Sjælland." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -21,11 +24,14 @@
                 hover: '#3F5E55',
                 formBg: '#FFFFFF',
                 dark: '#2A3F38',
-                black: '#111111'
+                black: '#111111',
+                logoDarkRed: '#4F0D0F', // Logo background color (used for text on light bg)
+                logoBrown: '#AA5D48' // Logo subtitle color
               }
             },
             fontFamily: {
               sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+              raleway: ['Raleway', 'sans-serif'],
             },
             boxShadow: {
               'soft': '0 10px 40px -10px rgba(0,0,0,0.05)',
@@ -173,9 +179,12 @@
           
           <div class="flex-shrink-0 w-auto lg:w-1/4">
             <a href="#" class="flex items-center gap-3 group" id="nav-logo">
-              <!-- Replaced SVG with PNG Image Logo -->
-              <img src="./assets/images/logo.png" alt="Tryg-Teamet Logo" class="h-12 w-auto object-contain transform transition-transform duration-300 group-hover:scale-105" />
-              <span class="text-2xl sm:text-3xl font-bold tracking-tight text-tryg-text group-hover:text-tryg-accent transition-colors">Tryg-Teamet</span>
+              <!-- Logo Icon with background -->
+              <img src="./assets/images/LOGO-ikon.svg" alt="Tryg-Teamet Logo" class="h-12 w-auto object-contain transform transition-transform duration-300 group-hover:scale-105" />
+              <div class="flex flex-col">
+                <span class="text-xl sm:text-2xl font-raleway font-extrabold tracking-tight text-tryg-logoDarkRed group-hover:text-tryg-logoDarkRed transition-colors leading-tight">TRYG-TEAMET</span>
+                <span class="text-xs sm:text-sm font-raleway font-medium text-tryg-logoBrown leading-tight">-sammen om tryghed</span>
+              </div>
             </a>
           </div>
 
@@ -769,11 +778,9 @@
     <!-- Footer -->
     <footer class="bg-white border-t border-tryg-border py-16 px-6">
       <div class="max-w-[1200px] mx-auto flex flex-col items-center justify-center text-center text-sm text-tryg-secondary gap-4">
-           <!-- Footer Logo (Added) -->
-           <div class="flex items-center gap-2 mb-4 opacity-50 hover:opacity-100 transition-opacity">
-               <!-- Replaced SVG with PNG Image Logo -->
-               <img src="./assets/images/logo.png" alt="Tryg-Teamet Logo" class="h-8 w-auto object-contain" />
-              <span class="text-xl font-bold tracking-tight text-tryg-text">Tryg-Teamet</span>
+           <!-- Footer Logo -->
+           <div class="flex items-center justify-center mb-4">
+               <img src="./assets/images/LOGO-ikon.svg" alt="Tryg-Teamet Logo" class="h-16 w-auto object-contain" />
            </div>
            
            <p class="mt-2">Tryg-Teamet ApS - Fuglevangsvej 11 - 1962 Frederiksberg C</p>
