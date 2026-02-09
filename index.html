@@ -18,15 +18,17 @@
                 base: '#F5F5F7',
                 text: '#1D1D1F',
                 secondary: '#6E6E73',
-                accent: '#4F6F64', // The specific green brand color
-                accentLight: '#E6EFEB',
+                accent: '#C84938', // Logo rød (hovedform)
+                accentLight: '#FDF2F0',
                 border: '#D2D2D7',
-                hover: '#3F5E55',
+                hover: '#4F0D0F', // Mørkerød ved hover
                 formBg: '#FFFFFF',
-                dark: '#2A3F38',
+                dark: '#4F0D0F',
                 black: '#111111',
-                logoDarkRed: '#4F0D0F', // Logo background color (used for text on light bg)
-                logoBrown: '#AA5D48' // Logo subtitle color
+                logoDarkRed: '#4F0D0F',
+                logoBrown: '#AA5D48',
+                logoPeach: '#E89D73',
+                logoCream: '#FBF3E6'
               }
             },
             fontFamily: {
@@ -36,7 +38,7 @@
             boxShadow: {
               'soft': '0 10px 40px -10px rgba(0,0,0,0.05)',
               'card': '0 4px 20px -2px rgba(0,0,0,0.06)',
-              'green-glow': '0 25px 50px -12px rgba(79, 111, 100, 0.35)', 
+              'red-glow': '0 25px 50px -12px rgba(200, 73, 56, 0.35)', 
               'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
             },
             animation: {
@@ -111,7 +113,7 @@
         transition: color 0.5s ease, transform 0.5s ease;
       }
       .timeline-step.active .timeline-number {
-        color: #4F6F64;
+        color: #C84938;
         transform: scale(1.05);
       }
       .timeline-step.active h4 { color: #1D1D1F; }
@@ -144,7 +146,7 @@
       /* Interactive Map Node */
       .map-node { transition: all 0.3s ease-out; }
       .map-node:hover {
-          border-color: #4F6F64;
+          border-color: #C84938;
           transform: translate(-50%, -50%) scale(1.15) !important;
           z-index: 30;
       }
@@ -198,7 +200,7 @@
           </div>
 
           <div class="flex w-auto lg:w-1/4 justify-end items-center gap-4">
-            <a href="#kontakt" id="nav-cta" class="hidden lg:inline-flex bg-tryg-accent text-white px-7 py-3 rounded-full text-base font-bold hover:bg-green-600 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-green-900/20">
+            <a href="#kontakt" id="nav-cta" class="hidden lg:inline-flex bg-tryg-accent text-white px-7 py-3 rounded-full text-base font-bold hover:bg-[#4F0D0F] hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-red-900/20">
               Kontakt os
             </a>
             <button id="mobile-menu-btn" class="lg:hidden p-2 transition-colors text-tryg-text hover:text-black">
@@ -216,7 +218,7 @@
           <a href="#hvordan-vi-arbejder" class="text-xl font-medium mobile-link">Proces</a>
           <a href="#samarbejdspartnere" class="text-xl font-medium mobile-link">Samarbejde</a>
           <a href="#vikarer" class="text-xl font-medium mobile-link">Vikar</a>
-          <a href="#kontakt" class="bg-tryg-accent text-white px-6 py-4 rounded-full font-bold hover:bg-green-600 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-green-900/20 mt-4 inline-block mobile-link">
+          <a href="#kontakt" class="bg-tryg-accent text-white px-6 py-4 rounded-full font-bold hover:bg-[#4F0D0F] hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-red-900/20 mt-4 inline-block mobile-link">
             Kontakt os
           </a>
         </div>
@@ -243,13 +245,13 @@
              <!-- Left: Text Content -->
              <div class="text-white fade-in-section relative">
                 <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full text-xs font-bold tracking-wide uppercase mb-8 text-white shadow-sm">
-                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    <span class="w-2 h-2 rounded-full bg-tryg-accent animate-pulse"></span>
                     Vi skaber tryghed gennem mennesker
                 </div>
                 
                 <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.05] mb-8 text-white drop-shadow-md">
                    Tryghed i hver vagt. <br/>
-                   <span class="text-green-300 relative whitespace-nowrap">
+                   <span class="text-tryg-logoPeach relative whitespace-nowrap">
                        Mennesker først.
                    </span>
                 </h1>
@@ -259,7 +261,7 @@
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-5 mb-12">
-                    <a href="#kontakt" class="bg-tryg-accent text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-green-600 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-green-900/20 text-center flex items-center justify-center gap-2 group border border-transparent">
+                    <a href="#kontakt" class="bg-tryg-accent text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-[#4F0D0F] hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-red-900/20 text-center flex items-center justify-center gap-2 group border border-transparent">
                       Få hjælp til bemanding
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
@@ -270,15 +272,15 @@
 
                 <div class="flex flex-wrap gap-8 text-sm font-bold tracking-wider text-gray-300 uppercase border-t border-white/20 pt-8">
                     <div class="flex items-center gap-2">
-                        <svg class="text-green-300" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <svg class="text-tryg-logoPeach" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                         Hele Sjælland
                     </div>
                     <div class="flex items-center gap-2">
-                         <svg class="text-green-300" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                         <svg class="text-tryg-logoPeach" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                         24/7 Vagttelefon
                     </div>
                      <div class="flex items-center gap-2">
-                        <svg class="text-green-300" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <svg class="text-tryg-logoPeach" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                         Godkendte Vikarer
                     </div>
                 </div>
@@ -288,7 +290,7 @@
              <div class="hidden lg:flex relative h-[600px] items-center justify-end pointer-events-none">
                  <div class="absolute bottom-32 right-12 bg-white/10 backdrop-blur-xl p-5 rounded-2xl shadow-2xl animate-float-slow max-w-[260px] z-20 border border-white/20">
                      <div class="flex items-center gap-3 mb-2">
-                         <div class="bg-green-500/20 p-2 rounded-full text-green-300">
+                         <div class="bg-tryg-accent/20 p-2 rounded-full text-tryg-logoPeach">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
                          </div>
                          <div class="text-white font-bold text-sm">Godkendt kvalitet</div>
@@ -297,7 +299,7 @@
                  </div>
 
                  <div class="absolute top-40 right-20 bg-white/10 backdrop-blur-xl p-4 pr-6 rounded-2xl shadow-2xl animate-float-medium flex items-center gap-3 border border-white/20 z-20">
-                     <div class="bg-green-600 text-white p-3 rounded-xl shadow-lg shadow-green-900/20">
+                     <div class="bg-tryg-accent text-white p-3 rounded-xl shadow-lg shadow-red-900/20">
                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                      </div>
                      <div>
@@ -338,7 +340,7 @@
                       <img src="./assets/images/about-foundation.jpg" alt="Pædagogisk støtte og nærvær" class="w-full h-full object-cover opacity-95 hover:opacity-100 transition-opacity duration-500" />
                   </div>
                   <!-- Front Image: The Connection -->
-                  <div id="om-os-front" class="absolute bottom-0 left-0 sm:left-4 w-[55%] sm:w-[50%] h-[300px] rounded-tl-[2rem] rounded-br-[2rem] rounded-tr-[3.5rem] rounded-bl-[3.5rem] overflow-hidden shadow-green-glow z-10 border-[8px] border-white transition-transform duration-75 ease-linear">
+                  <div id="om-os-front" class="absolute bottom-0 left-0 sm:left-4 w-[55%] sm:w-[50%] h-[300px] rounded-tl-[2rem] rounded-br-[2rem] rounded-tr-[3.5rem] rounded-bl-[3.5rem] overflow-hidden shadow-red-glow z-10 border-[8px] border-white transition-transform duration-75 ease-linear">
                       <img src="./assets/images/about-connection.jpg" alt="Smilende interaktion" class="w-full h-full object-cover" />
                   </div>
 
@@ -351,7 +353,7 @@
                   </div>
 
                   <!-- Badge 2 -->
-                  <div class="absolute bottom-12 -right-4 bg-white/90 backdrop-blur-md text-tryg-accent p-5 rounded-2xl shadow-green-glow z-20 animate-float-medium max-w-[200px] border border-white/50">
+                  <div class="absolute bottom-12 -right-4 bg-white/90 backdrop-blur-md text-tryg-accent p-5 rounded-2xl shadow-red-glow z-20 animate-float-medium max-w-[200px] border border-white/50">
                       <div class="flex flex-col gap-1">
                         <p class="font-bold text-lg">Høj Faglighed</p>
                         <p class="text-xs text-tryg-secondary">Vi går ikke på kompromis</p>
@@ -371,7 +373,7 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-y-16 md:gap-x-10">
                 <!-- Værdi 1 -->
-                <div class="spotlight-card-light group bg-white rounded-[2.5rem] shadow-soft hover:shadow-green-glow hover:scale-[1.02] transition-all duration-300 flex flex-col border border-transparent hover:border-tryg-accent/30">
+                <div class="spotlight-card-light group bg-white rounded-[2.5rem] shadow-soft hover:shadow-red-glow hover:scale-[1.02] transition-all duration-300 flex flex-col border border-transparent hover:border-tryg-accent/30">
                     <div class="relative h-64 w-full overflow-hidden rounded-t-[2.5rem]">
                         <img src="./assets/images/value-tryghed.jpg" class="w-full h-full object-cover" alt="Tryghed">
                         <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-80"></div>
@@ -382,7 +384,7 @@
                     </div>
                 </div>
                 <!-- Værdi 2 -->
-                <div class="spotlight-card-light group bg-white rounded-[2.5rem] shadow-soft hover:shadow-green-glow hover:scale-[1.02] transition-all duration-300 flex flex-col md:translate-y-12 border border-transparent hover:border-tryg-accent/30">
+                <div class="spotlight-card-light group bg-white rounded-[2.5rem] shadow-soft hover:shadow-red-glow hover:scale-[1.02] transition-all duration-300 flex flex-col md:translate-y-12 border border-transparent hover:border-tryg-accent/30">
                     <div class="relative h-64 w-full overflow-hidden rounded-t-[2.5rem]">
                         <img src="./assets/images/value-naerhed.jpg" class="w-full h-full object-cover" alt="Nærhed">
                         <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-80"></div>
@@ -393,7 +395,7 @@
                     </div>
                 </div>
                 <!-- Værdi 3 -->
-                <div class="spotlight-card-light group bg-white rounded-[2.5rem] shadow-soft hover:shadow-green-glow hover:scale-[1.02] transition-all duration-300 flex flex-col border border-transparent hover:border-tryg-accent/30">
+                <div class="spotlight-card-light group bg-white rounded-[2.5rem] shadow-soft hover:shadow-red-glow hover:scale-[1.02] transition-all duration-300 flex flex-col border border-transparent hover:border-tryg-accent/30">
                     <div class="relative h-64 w-full overflow-hidden rounded-t-[2.5rem]">
                         <img src="./assets/images/value-ordentlighed.jpg" class="w-full h-full object-cover" alt="Ordentlighed">
                         <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-80"></div>
@@ -417,7 +419,7 @@
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Card 1 -->
-            <div class="service-card group bg-white p-10 sm:p-12 rounded-[2.5rem] shadow-soft hover:shadow-green-glow hover:scale-[1.02] hover:border-tryg-accent/30 transition-all duration-300 relative cursor-pointer overflow-hidden h-full flex flex-col justify-between border border-transparent">
+            <div class="service-card group bg-white p-10 sm:p-12 rounded-[2.5rem] shadow-soft hover:shadow-red-glow hover:scale-[1.02] hover:border-tryg-accent/30 transition-all duration-300 relative cursor-pointer overflow-hidden h-full flex flex-col justify-between border border-transparent">
               <div class="relative z-10">
                 <div class="text-tryg-accent mb-8 bg-white w-fit p-5 rounded-2xl shadow-sm border border-tryg-accent/10 group-hover:border-tryg-accent/30 group-hover:shadow-md transition-all duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -429,7 +431,7 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="service-card group bg-white p-10 sm:p-12 rounded-[2.5rem] shadow-soft hover:shadow-green-glow hover:scale-[1.02] hover:border-tryg-accent/30 transition-all duration-300 relative cursor-pointer overflow-hidden h-full flex flex-col justify-between border border-transparent">
+            <div class="service-card group bg-white p-10 sm:p-12 rounded-[2.5rem] shadow-soft hover:shadow-red-glow hover:scale-[1.02] hover:border-tryg-accent/30 transition-all duration-300 relative cursor-pointer overflow-hidden h-full flex flex-col justify-between border border-transparent">
               <div class="relative z-10">
                 <div class="text-tryg-accent mb-8 bg-white w-fit p-5 rounded-2xl shadow-sm border border-tryg-accent/10 group-hover:border-tryg-accent/30 group-hover:shadow-md transition-all duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -441,7 +443,7 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="service-card group bg-white p-10 sm:p-12 rounded-[2.5rem] shadow-soft hover:shadow-green-glow hover:scale-[1.02] hover:border-tryg-accent/30 transition-all duration-300 relative cursor-pointer overflow-hidden h-full flex flex-col justify-between border border-transparent">
+            <div class="service-card group bg-white p-10 sm:p-12 rounded-[2.5rem] shadow-soft hover:shadow-red-glow hover:scale-[1.02] hover:border-tryg-accent/30 transition-all duration-300 relative cursor-pointer overflow-hidden h-full flex flex-col justify-between border border-transparent">
                <div class="relative z-10">
                 <div class="text-tryg-accent mb-8 bg-white w-fit p-5 rounded-2xl shadow-sm border border-tryg-accent/10 group-hover:border-tryg-accent/30 group-hover:shadow-md transition-all duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
@@ -453,7 +455,7 @@
             </div>
 
             <!-- Card 4 -->
-            <div class="service-card group bg-white p-10 sm:p-12 rounded-[2.5rem] shadow-soft hover:shadow-green-glow hover:scale-[1.02] hover:border-tryg-accent/30 transition-all duration-300 relative cursor-pointer overflow-hidden h-full flex flex-col justify-between border border-transparent">
+            <div class="service-card group bg-white p-10 sm:p-12 rounded-[2.5rem] shadow-soft hover:shadow-red-glow hover:scale-[1.02] hover:border-tryg-accent/30 transition-all duration-300 relative cursor-pointer overflow-hidden h-full flex flex-col justify-between border border-transparent">
               <div class="relative z-10">
                 <div class="text-tryg-accent mb-8 bg-white w-fit p-5 rounded-2xl shadow-sm border border-tryg-accent/10 group-hover:border-tryg-accent/30 group-hover:shadow-md transition-all duration-300">
                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -478,7 +480,7 @@
               <p class="text-xl text-tryg-secondary leading-relaxed mb-12">Vi har en simpel og transparent proces, der sikrer det rette match hver gang.</p>
               
               <!-- Updated Image Container with Softer Frame -->
-              <div class="relative w-full aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-green-glow border border-white/20 bg-white hidden md:block group/imgframe">
+              <div class="relative w-full aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-red-glow border border-white/20 bg-white hidden md:block group/imgframe">
                  <!-- Image 1: Afklaring (Warm Dialog) -->
                  <img src="./assets/images/process-afklaring.jpg" id="process-img-1" class="timeline-img active absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/imgframe:scale-105" alt="Afklaring dialog">
                  <!-- Image 2: Match (Male Pedagogue / Competent) -->
@@ -506,7 +508,7 @@
                  </div>
                  
                  <!-- Step Card (Enhanced Active State) -->
-                 <div class="bg-white p-8 sm:p-10 rounded-[2.5rem] shadow-soft border border-transparent group-[.active]:shadow-green-glow group-[.active]:border-tryg-accent/30 group-[.active]:opacity-100 opacity-60 transition-all duration-500 w-full">
+                 <div class="bg-white p-8 sm:p-10 rounded-[2.5rem] shadow-soft border border-transparent group-[.active]:shadow-red-glow group-[.active]:border-tryg-accent/30 group-[.active]:opacity-100 opacity-60 transition-all duration-500 w-full">
                      <span class="text-7xl font-bold text-tryg-accent/5 md:hidden block leading-none mb-4 italic">01</span>
                      <h4 class="text-3xl font-bold text-tryg-text mb-6 tracking-tight">Afklaring</h4>
                      <p class="text-xl text-tryg-secondary leading-relaxed font-light">Vi starter med at forstå opgaven, rammerne og menneskene involveret. En god start kræver indsigt i jeres hverdag. Vi tager en grundig snak om forventninger og behov.</p>
@@ -523,7 +525,7 @@
                  </div>
 
                  <!-- Step Card -->
-                 <div class="bg-white p-8 sm:p-10 rounded-[2.5rem] shadow-soft border border-transparent group-[.active]:shadow-green-glow group-[.active]:border-tryg-accent/30 group-[.active]:opacity-100 opacity-60 transition-all duration-500 w-full">
+                 <div class="bg-white p-8 sm:p-10 rounded-[2.5rem] shadow-soft border border-transparent group-[.active]:shadow-red-glow group-[.active]:border-tryg-accent/30 group-[.active]:opacity-100 opacity-60 transition-all duration-500 w-full">
                      <span class="text-7xl font-bold text-tryg-accent/5 md:hidden block leading-none mb-4 italic">02</span>
                      <h4 class="text-3xl font-bold text-tryg-text mb-6 tracking-tight">Det rette match</h4>
                      <p class="text-xl text-tryg-secondary leading-relaxed font-light">Vi matcher med omtanke. Vi ser ikke kun på faglighed, men i høj grad også på den personlige egnethed til netop jeres sted. I får præsenteret en kandidat, vi står inde for.</p>
@@ -540,7 +542,7 @@
                  </div>
 
                  <!-- Step Card -->
-                 <div class="bg-white p-8 sm:p-10 rounded-[2.5rem] shadow-soft border border-transparent group-[.active]:shadow-green-glow group-[.active]:border-tryg-accent/30 group-[.active]:opacity-100 opacity-60 transition-all duration-500 w-full">
+                 <div class="bg-white p-8 sm:p-10 rounded-[2.5rem] shadow-soft border border-transparent group-[.active]:shadow-red-glow group-[.active]:border-tryg-accent/30 group-[.active]:opacity-100 opacity-60 transition-all duration-500 w-full">
                      <span class="text-7xl font-bold text-tryg-accent/5 md:hidden block leading-none mb-4 italic">03</span>
                      <h4 class="text-3xl font-bold text-tryg-text mb-6 tracking-tight">Opfølgning</h4>
                      <p class="text-xl text-tryg-secondary leading-relaxed font-light">Vi gør rammerne tydelige og følger op, hvis noget skal justeres. Dialogen stopper ikke, når vagten er dækket. Vi sikrer kvaliteten løbende.</p>
@@ -559,23 +561,23 @@
           <p class="text-xl text-tryg-secondary mb-20 max-w-3xl mx-auto">Vi hjælper jer med at få bemandingen til at fungere – også når hverdagen er presset. Vi er stolte af det fællesskab, vi bygger hver dag.</p>
           
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-20">
-              <div class="flex flex-col items-center justify-center bg-white p-10 rounded-[2.5rem] shadow-soft border border-transparent hover:shadow-green-glow hover:border-tryg-accent/30 hover:scale-[1.02] transition-all duration-300 group">
-                  <div class="text-4xl sm:text-5xl font-bold text-tryg-accent mb-2 group-hover:scale-110 transition-transform duration-300">98%</div>
+              <div class="flex flex-col items-center justify-center bg-white p-10 rounded-[2.5rem] shadow-soft border border-transparent hover:shadow-red-glow hover:border-tryg-accent/30 hover:scale-[1.02] transition-all duration-300 group">
+                  <div class="text-4xl sm:text-5xl font-bold text-tryg-text mb-2 group-hover:scale-110 transition-transform duration-300">98%</div>
                   <div class="text-sm font-medium text-tryg-secondary uppercase tracking-wider">Dækningsgrad</div>
               </div>
-              <div class="flex flex-col items-center justify-center bg-white p-10 rounded-[2.5rem] shadow-soft border border-transparent hover:shadow-green-glow hover:border-tryg-accent/30 hover:scale-[1.02] transition-all duration-300 group">
-                  <div class="text-4xl sm:text-5xl font-bold text-tryg-accent mb-2 flex items-baseline group-hover:scale-110 transition-transform duration-300"><span class="text-3xl mr-1"><</span>45<span class="text-2xl ml-1">min</span></div>
+              <div class="flex flex-col items-center justify-center bg-white p-10 rounded-[2.5rem] shadow-soft border border-transparent hover:shadow-red-glow hover:border-tryg-accent/30 hover:scale-[1.02] transition-all duration-300 group">
+                  <div class="text-4xl sm:text-5xl font-bold text-tryg-text mb-2 flex items-baseline group-hover:scale-110 transition-transform duration-300"><span class="text-3xl mr-1"><</span>45<span class="text-2xl ml-1">min</span></div>
                   <div class="text-sm font-medium text-tryg-secondary uppercase tracking-wider">Gns. Responstid</div>
               </div>
-              <div class="flex flex-col items-center justify-center bg-white p-10 rounded-[2.5rem] shadow-soft border border-transparent hover:shadow-green-glow hover:border-tryg-accent/30 hover:scale-[1.02] transition-all duration-300 group">
-                  <div class="text-4xl sm:text-5xl font-bold text-tryg-accent mb-2 group-hover:scale-110 transition-transform duration-300">100%</div>
+              <div class="flex flex-col items-center justify-center bg-white p-10 rounded-[2.5rem] shadow-soft border border-transparent hover:shadow-red-glow hover:border-tryg-accent/30 hover:scale-[1.02] transition-all duration-300 group">
+                  <div class="text-4xl sm:text-5xl font-bold text-tryg-text mb-2 group-hover:scale-110 transition-transform duration-300">100%</div>
                   <div class="text-sm font-medium text-tryg-secondary uppercase tracking-wider">Godkendte Attester</div>
               </div>
           </div>
           
           <div class="relative w-full max-w-[1000px] mx-auto aspect-[16/9] hidden md:block map-container bg-tryg-base/20 rounded-[3rem] border border-gray-100/50 overflow-hidden shadow-inner">
              <svg class="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 100 100" preserveAspectRatio="none">
-               <path d="M 50 90 C 90 55 100 25 75 25 C 60 25 50 40 50 40 C 50 40 40 25 25 25 C 0 25 10 55 50 90 Z" fill="#4F6F64" fill-opacity="0.03" />
+               <path d="M 50 90 C 90 55 100 25 75 25 C 60 25 50 40 50 40 C 50 40 40 25 25 25 C 0 25 10 55 50 90 Z" fill="#C84938" fill-opacity="0.03" />
                <line x1="50" y1="50" x2="25" y2="25" stroke="#D2D2D7" stroke-width="0.3" stroke-dasharray="1 1" />
                <line x1="50" y1="50" x2="75" y2="25" stroke="#D2D2D7" stroke-width="0.3" stroke-dasharray="1 1" />
                <line x1="50" y1="50" x2="10" y2="45" stroke="#D2D2D7" stroke-width="0.3" stroke-dasharray="1 1" />
@@ -586,35 +588,35 @@
              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 z-20 flex flex-col items-center justify-center transition-all duration-300">
                 <div class="absolute inset-0 bg-tryg-accent/5 rounded-full animate-ping opacity-75 pointer-events-none"></div>
                 <div class="absolute inset-4 bg-white/80 backdrop-blur-md rounded-full shadow-2xl border-[6px] border-white/50 flex flex-col items-center justify-center">
-                    <div class="font-bold text-3xl text-tryg-accent tracking-tight mb-1 relative z-10">Tryg-Teamet</div>
+                    <div class="font-bold text-3xl text-tryg-logoDarkRed tracking-tight mb-1 relative z-10">Tryg-Teamet</div>
                     <div class="px-6 h-12 flex items-center justify-center relative z-10">
                         <p id="network-info-text" class="text-xs text-tryg-secondary font-medium uppercase tracking-widest leading-relaxed transition-opacity duration-200">Sjælland</p>
                     </div>
                 </div>
              </div>
 
-             <div class="map-node absolute top-[25%] left-[25%] -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-white/80 backdrop-blur-md rounded-full shadow-lg flex flex-col items-center justify-center z-10 border border-white/60 cursor-pointer hover:shadow-green-glow hover:scale-105 transition-all duration-300" data-info="Vi sikrer høj leveringssikkerhed og dokumenteret kvalitet i alle kommunale aftaler.">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4F6F64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-2"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M17 21v-8.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V21"/><path d="M19 8v5"/><path d="M5 8v5"/></svg>
+             <div class="map-node absolute top-[25%] left-[25%] -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-white/80 backdrop-blur-md rounded-full shadow-lg flex flex-col items-center justify-center z-10 border border-white/60 cursor-pointer hover:shadow-red-glow hover:scale-105 transition-all duration-300" data-info="Vi sikrer høj leveringssikkerhed og dokumenteret kvalitet i alle kommunale aftaler.">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C84938" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-2"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M17 21v-8.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V21"/><path d="M19 8v5"/><path d="M5 8v5"/></svg>
                   <span class="font-semibold text-tryg-text text-sm">Kommune</span>
              </div>
 
-             <div class="map-node absolute top-[25%] left-[75%] -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-white/80 backdrop-blur-md rounded-full shadow-lg flex flex-col items-center justify-center z-10 border border-white/60 cursor-pointer hover:shadow-green-glow hover:scale-105 transition-all duration-300" data-info="Faguddannet personale der træder til med kort varsel og kender jeres rutiner.">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4F6F64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+             <div class="map-node absolute top-[25%] left-[75%] -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-white/80 backdrop-blur-md rounded-full shadow-lg flex flex-col items-center justify-center z-10 border border-white/60 cursor-pointer hover:shadow-red-glow hover:scale-105 transition-all duration-300" data-info="Faguddannet personale der træder til med kort varsel og kender jeres rutiner.">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C84938" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                   <span class="font-semibold text-tryg-text text-sm">Institution</span>
              </div>
 
-             <div class="map-node absolute top-[90%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-white/80 backdrop-blur-md rounded-full shadow-lg flex flex-col items-center justify-center z-10 border border-white/60 cursor-pointer hover:shadow-green-glow hover:scale-105 transition-all duration-300" data-info="Pædagogisk personale med stor erfaring i konflikthåndtering og omsorgsarbejde.">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4F6F64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+             <div class="map-node absolute top-[90%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-white/80 backdrop-blur-md rounded-full shadow-lg flex flex-col items-center justify-center z-10 border border-white/60 cursor-pointer hover:shadow-red-glow hover:scale-105 transition-all duration-300" data-info="Pædagogisk personale med stor erfaring i konflikthåndtering og omsorgsarbejde.">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C84938" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                   <span class="font-semibold text-tryg-text text-sm">Bosted</span>
              </div>
 
-             <div class="map-node absolute top-[45%] left-[10%] -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-white/80 backdrop-blur-md rounded-full shadow-lg flex flex-col items-center justify-center z-10 border border-white/60 cursor-pointer hover:shadow-green-glow hover:scale-105 transition-all duration-300" data-info="Skræddersyede forløb til borgere med særlige behov. 1:1 eller i teams.">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4F6F64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-5.82 3.25L7.38 14.14 2.38 9.27l6.91-1.01L12 2z"/></svg>
+             <div class="map-node absolute top-[45%] left-[10%] -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-white/80 backdrop-blur-md rounded-full shadow-lg flex flex-col items-center justify-center z-10 border border-white/60 cursor-pointer hover:shadow-red-glow hover:scale-105 transition-all duration-300" data-info="Skræddersyede forløb til borgere med særlige behov. 1:1 eller i teams.">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C84938" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-5.82 3.25L7.38 14.14 2.38 9.27l6.91-1.01L12 2z"/></svg>
                   <span class="font-semibold text-tryg-text text-sm">Specialtilbud</span>
              </div>
 
-             <div class="map-node absolute top-[45%] left-[90%] -translate-x-1/2 -translate-y-1/2 w-28 h-28 bg-white/80 backdrop-blur-md rounded-full shadow-lg flex flex-col items-center justify-center z-10 border border-white/60 cursor-pointer hover:shadow-green-glow hover:scale-105 transition-all duration-300" data-info="Læreruddannede vikarer der kan overtage undervisningen fra første time.">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4F6F64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+             <div class="map-node absolute top-[45%] left-[90%] -translate-x-1/2 -translate-y-1/2 w-28 h-28 bg-white/80 backdrop-blur-md rounded-full shadow-lg flex flex-col items-center justify-center z-10 border border-white/60 cursor-pointer hover:shadow-red-glow hover:scale-105 transition-all duration-300" data-info="Læreruddannede vikarer der kan overtage undervisningen fra første time.">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C84938" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
                   <span class="font-semibold text-tryg-text text-sm">Skole</span>
              </div>
           </div>
@@ -647,10 +649,10 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="order-2 lg:order-1">
                     <h2 class="text-sm font-semibold text-tryg-secondary uppercase tracking-[0.2em] mb-4">Til Vikarer</h2>
-                    <h3 class="text-4xl sm:text-5xl font-semibold text-tryg-text mb-6">Bliv en del af holdet hos Tryg-Teamet</h3>
+                    <h3 class="text-4xl sm:text-5xl font-semibold text-tryg-text mb-6">Bliv en del af holdet hos <span class="text-tryg-logoDarkRed">Tryg-Teamet</span></h3>
                     <p class="text-lg text-tryg-secondary mb-10 leading-relaxed">Som vikar hos Tryg-Teamet møder du klare rammer, ordentlig dialog og respekt for din faglighed.</p>
                     
-                    <a href="#kontakt" class="inline-block bg-tryg-accent text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-green-600 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-green-900/20 mb-12">
+                    <a href="#kontakt" class="inline-block bg-tryg-accent text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-[#4F0D0F] hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-red-900/20 mb-12">
                         Kontakt os for en snak
                     </a>
 
@@ -658,7 +660,7 @@
                 </div>
 
                 <div class="order-1 lg:order-2 relative flex justify-center">
-                    <div class="relative w-full max-w-md aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-green-glow border border-white/20">
+                    <div class="relative w-full max-w-md aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-red-glow border border-white/20">
                         <img src="./assets/images/vikar-smile.jpg" class="w-full h-full object-cover" alt="Glad vikar">
                     </div>
 
@@ -753,7 +755,7 @@
          <span class="text-xs text-tryg-secondary font-bold uppercase tracking-wider">Akut behov?</span>
          <span class="text-tryg-text font-semibold">Vagttelefon 24/7</span>
        </div>
-       <a href="tel:+" class="bg-tryg-accent text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-green-600 hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
+       <a href="tel:+" class="bg-tryg-accent text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-[#4F0D0F] hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Ring op
        </a>
     </div> 
